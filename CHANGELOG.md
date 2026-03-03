@@ -1,9 +1,6 @@
 # Change Log
 
-All notable changes to the "python-formatter" extension will be documented in this file.
+## [1.0.0] - 2026-03-03
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- Initial release: added in-house Python formatter implementing common PEP8 rules
+- Added command `Format Python (PEP8)` and `Ctrl+Alt+F` keybinding

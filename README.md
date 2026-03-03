@@ -1,71 +1,47 @@
-# python-formatter README
+# python-formatter
 
-This is the README for your extension "python-formatter". After writing up a brief description, we recommend including the following sections.
+`python-formatter` is a lightweight Visual Studio Code extension that formats Python files using an in-house, PEP8-inspired formatter.
 
-## Features
+**Key features**
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Format the active Python file according to common PEP8 conventions (indentation normalization, trailing whitespace removal, blank-line rules, basic operator spacing, and comment wrapping).
+- Works entirely in-house (no external formatters needed).
+- Trigger via the `Format Python (PEP8)` command or the keyboard shortcut.
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open a Python file in VS Code.
+2. Run the command `Format Python (PEP8)` from the Command Palette, or press the keybinding `Ctrl+Alt+F` when the editor is focused.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+The formatter will replace the document contents with the formatted version and save the file.
+
+## Keybinding
+
+- `Ctrl+Alt+F` — Format current Python file (when the editor is focused and language is Python)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+No external tools are required.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+This extension does not add any user-configurable settings yet.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- This formatter implements a conservative, heuristic-based subset of PEP8 rules. It may not cover all edge cases or complex code constructs. Use with caution on large or production-critical codebases.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+See `CHANGELOG.md` for full release notes.
 
 ---
 
-## Following extension guidelines
+## Contributing
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+If you'd like to improve the formatter, open an issue or submit a pull request.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+## License
 
-## Working with Markdown
+This project is licensed under the MIT License — see the `LICENSE` file for details.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
