@@ -1,6 +1,6 @@
 {
   "name": "python-formatter",
-  "displayName": "Python Formatter",
+  "displayName": "Python-Formatter",
   "publisher": "LukeYong",
   "icon": "icon.png",
   "description": "Format according to PEP8",
