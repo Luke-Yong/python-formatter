@@ -9,3 +9,22 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+
+# Dependencies
+node_modules/**
+
+# Build/test
+out/test/**
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/**
+*.swp
+*.swo
