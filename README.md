@@ -1,35 +1,51 @@
 # python-formatter
 
-`python-formatter` is a lightweight Visual Studio Code extension that formats Python files using an in-house, PEP8-inspired formatter.
+`python-formatter` is a Visual Studio Code extension that formats Python files using **Black**, the industry-standard PEP8 formatter.
 
 **Key features**
 
-- Format the active Python file according to common PEP8 conventions (indentation normalization, trailing whitespace removal, blank-line rules, basic operator spacing, and comment wrapping).
-- Works entirely in-house (no external formatters needed).
-- Trigger via the `Format Python (PEP8)` command or the keyboard shortcut.
+- **Auto-installs Black** — The extension automatically installs Black on first use if not already present.
+- **Uses the most accurate formatter** — Black is the de facto standard Python formatter (used by Python, Django, PyTorch, etc.).
+- **Zero configuration** — Works out of the box with sensible defaults.
+- **Fast formatting** — Formats files in milliseconds.
+- **Fallback built-in formatter** — Basic PEP8 formatting if Black is unavailable.
 
 ## Usage
 
 1. Open a Python file in VS Code.
-2. Run the command `Format Python (PEP8)` from the Command Palette, or press the keybinding `Ctrl+Alt+F` when the editor is focused.
+2. Press **Shift+Alt+F** (or run `Format Python (PEP8)` from the Command Palette).
 
-The formatter will replace the document contents with the formatted version and save the file.
+The extension will:
+1. Check if Black is installed (auto-installs on first use if needed)
+2. Format the document with Black
+3. Save the file
+
+You can also use the standard VS Code **Format Document** command (Shift+Alt+F) — the extension registers as the default Python formatter.
 
 ## Keybinding
 
-- `Ctrl+Alt+F` — Format current Python file (when the editor is focused and language is Python)
+- `Shift+Alt+F` — Format current Python file (standard VS Code format keybinding)
 
 ## Requirements
 
-No external tools are required.
+- Python 3.6+ with pip (for Black auto-installation)
+- Black will be automatically installed on first use if not already available
+
+### Manual Black Installation (Optional)
+
+If you prefer to install Black yourself:
+
+```bash
+pip install black
+```
 
 ## Extension Settings
 
-This extension does not add any user-configurable settings yet.
+This extension does not add any user-configurable settings. It uses Black with sensible defaults.
 
 ## Known Issues
 
-- This formatter implements a conservative, heuristic-based subset of PEP8 rules. It may not cover all edge cases or complex code constructs. Use with caution on large or production-critical codebases.
+- The built-in fallback formatter (used when Black is unavailable) implements basic PEP8 rules and may not handle complex nested structures correctly. For best results, ensure Black is installed.
 
 ## Release Notes
 
